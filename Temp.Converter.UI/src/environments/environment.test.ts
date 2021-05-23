@@ -9,7 +9,7 @@ export const environment = {
   },
 
   temperatureApi: {
-    baseUrl: 'https://temperature-converter-api-v1.azurewebsites.net/api'
+    baseUrl: 'https://temperature-converter-api-v1.azurewebsites.net/api/'
   },
 
   };
