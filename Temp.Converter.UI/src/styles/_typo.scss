@@ -1,0 +1,30 @@
+
+@import '_basevar';
+
+
+body,p,h1, h2, h3, h4, h5, h5, label{font-family: $font-app-font;}
+label{font-size: 0.85rem; font-weight: 400;}
+
+h1{
+    margin: $header-h1-margin;
+    font-size: $header-h1-size;
+    filter: brightness(.95); 
+}
+.header-2{
+    font-size: $header-h2-size;
+    font-weight: 700;
+}
+
+.header-1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.header-3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.mat-dialog-title{
+    font-family: $font-app-font!important; 
+}

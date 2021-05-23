@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -8,6 +11,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TempConverter",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,15 +31,17 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/web.config"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "prod": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -43,7 +51,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -56,8 +63,32 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "stage": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stage.ts"
                 }
               ]
             }
@@ -69,8 +100,8 @@
             "browserTarget": "TempConverter:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "TempConverter:build:production"
+            "prod": {
+              "browserTarget": "TempConverter:build:prod"
             }
           }
         },
@@ -89,10 +120,12 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/web.config"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }
@@ -117,16 +150,13 @@
             "devServerTarget": "TempConverter:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "TempConverter:serve:production"
+            "prod": {
+              "devServerTarget": "TempConverter:serve:prod"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "TempConverter",
-  "cli": {
-    "analytics": "f8909faf-1425-4c9a-b3ee-d11d0c50a5f8"
-  }
+  "defaultProject": "TempConverter"
 }

@@ -7,11 +7,21 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "startTest": "ng serve -c=test",
+    "startDev": "ng serve -c=dev",
+    "startProd": "ng serve -c=prod",
+    "startStage": "ng serve -c=stag",
+    "buildTest": "ng build -c=test",
+    "buildDev": "ng build -c=dev",
+    "buildProd": "ng build -c=prod",
+    "buildStage": "ng build -c=stage",
+    "prod-build-dev": "ng build --prod --build-optimizer"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.13",
+    "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.13",
     "@angular/compiler": "~9.1.13",
     "@angular/core": "~9.1.13",
@@ -21,6 +31,7 @@
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",
     "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

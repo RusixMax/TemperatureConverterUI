@@ -1,0 +1,86 @@
+@import './_basevar';
+
+.mat-table{
+    font-family: $font-app-font;
+}
+.mat-cell, .mat-footer-cell{
+    font-size: 0.8rem;
+}
+
+tr.card-header:hover{
+    background-color: $add-user-color!important;
+}
+
+tr.element-row:hover {
+    background-color: rgba(0,0,0,.075)!important;
+}
+  
+.mat-table thead th {
+    border-bottom-color: #d8d6d3;
+    // vertical-align: text-top!important;
+    background-color: $th-color;
+    font-weight: bold!important;
+    font-size: 0.85rem!important;
+}
+
+table.vehicle-details{
+    .mat-form-field-infix{
+        width: auto!important;
+    }
+    .mat-checkbox-label{
+        font-size: 0.75rem;
+        line-height: 0.9rem;
+        white-space: pre-wrap;
+    }
+}
+
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+
+// @include media-breakpoint-up(xl) { ... }
+@media only screen and (max-width: 991.98px) { 
+    .tab-pane{
+        // overflow: scroll;
+        // width: 200px;
+        overflow: auto;
+    }
+    // .table thead th{min-width: 7rem;}
+    // // .mat-form-field-infix{min-width: 300px;}
+    //.table{
+        thead{
+            display: none;
+        }
+        th, td{
+            display:block;
+            min-height: 2.5rem;
+            line-height: 2.5;
+        }
+    //}
+    table.vehicle-details{
+        tr:nth-of-type(odd) {
+            background-color: rgba(0,0,0,.05);
+        }
+        th,td{
+            display: inline-block;
+            width: 48%;
+        }
+        td:nth-child(odd){
+            margin-right: 1%;
+        }
+    }
+    
+    table.mat-calendar thead{
+        display: table-header-group;
+    }
+    
+    table.mat-calendar-table td, 
+    table.mat-calendar-table th {
+        display: table-cell;
+    }
+
+    th.mat-header-cell:first-of-type, 
+    td.mat-cell:first-of-type, 
+    td.mat-footer-cell:first-of-type {
+        padding-left: 0!important;
+    }
+}

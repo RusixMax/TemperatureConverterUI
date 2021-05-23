@@ -1,15 +1,16 @@
 export const environment = {
-  production: true ,
-
+    production: false ,
+  
   
   appSettings: {
     title: "Temperature Converter",
     corp: "Test",
-    environmentName: "Prod"
+    environmentName: "Test"
   },
 
   temperatureApi: {
     baseUrl: ''
   },
 
-};
+  };
+  

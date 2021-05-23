@@ -1,0 +1,88 @@
+    
+$font-app-font: "Open Sans", sans-serif, Helvetica, Arial;
+$font-app-font-size:1rem;
+
+$color-moonwhite: #ffffff;
+$color-nav-blue: #2960AF;
+$color-nav-white: #EEEEEE;
+$color-nav-lightGrey: #A8C0C9;
+$color-form-white: #DADADA;
+$color-form-blue: #2b80b9;
+$color-form-grey: #535353;
+$color-card-header:#FBFCFC;
+$color-card-header-hover:#EDF8FD;
+$color-card-border:#F0F1F3;
+$color-table-header: #DFDCD8; // gainsboro
+$color-adjust-huener-bg:rgba(74,74,74,.8);
+$color-adjust-huener-border: #c9c6c6;
+$color-adjust-huener-label:#999999;
+$color-link-blue: #1558D6;
+$color-link-red: red;
+$color-font-black: black;
+$color-form-lightGreyV2: #666666;
+$color-image-blue: #1D59FC;
+$color-image-lightBlue: aliceblue;
+
+
+
+// *** added classes ***
+$header-color: #17171A; //eerie black
+$subheader-color: #E3E1DD; // platinum
+$add-user-color: #F0F3F5;  // anti-flash white / for table hover and pagination
+
+$btn-primary-color: #227093; // subaru blue
+$btn-default-color: #16a085; // pale silver
+$btn-secondary-color: #C44536; // madder lake
+$btn-disabled-color: #C9C6C4; // pale silver
+
+$th-color: #DFDCD8; // gainsboro
+$color-moonwhite: #ffffff;
+
+$header-padding: 0.55rem 0rem;
+$logo-w: 2.5rem;
+$header-h1-size: 1rem;    
+$header-h1-margin: 0 0 0 0.5rem;
+$header-h2-size: 1.2rem;
+$subheader-font-size: 0.85rem;
+$subheader-padding: 0.6rem 0 0 0;
+$subheader-margin: 0.5rem;
+$subheader-offset: 3rem; 
+$color-moonwhite: #ffffff; 
+$subheader-h: 2.6rem;  
+
+$link-color: #17171A; // eerie black
+$link-secondary-color: #E4E2E1; // platinum
+
+$focus-color: #B6C7CD; // pastel blue
+$error-color: #C44536; // madder lake
+$icon-color: #C44536; // madder lake
+$accent-color: #615F60; // granite gray
+$icon-accent-color: #16a085; 
+$pagination-color: #DFDCD8; // gainsboro 
+$pagination-color-hover: #e9ecef;     
+
+//loader
+$color-adjust-huener-bg:rgba(74,74,74,.8);
+$color-adjust-huener-border: #c9c6c6;
+$color-adjust-huener-label:#999999;
+
+
+
+
+@mixin row-style($padding-top, $padding-bottom){
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom
+}
+
+@mixin margin-style($margin-left, $margin-top, $margin-right, $margin-bottom){
+    margin-left: $margin-left;
+    margin-top: $margin-top;
+    margin-right: $margin-right;
+    margin-bottom:$margin-bottom;
+}
+
+@mixin item-width-pc($size){
+	width: $size;
+} 
+
+

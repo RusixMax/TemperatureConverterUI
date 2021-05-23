@@ -1,0 +1,140 @@
+@import '_basevar';
+
+
+.material-label
+{    
+    vertical-align: middle;
+    font-size: 20px!important;
+    padding: 5px;
+}
+
+input:-internal-autofill-selected{
+    padding: 0.3rem;
+    margin-bottom: -0.35rem;
+}
+
+.mat-select-panel{
+    // .mat-option:first-of-type{
+    //    height: 0;
+    // }
+}
+
+.mat-content{
+    overflow: inherit!important;
+}
+
+.mat-form-field{
+    margin-bottom: 0; 
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 1rem;
+}
+
+.search-control{
+    margin-bottom: 1.5rem;
+}
+.mat-form-field{
+    font-size: 0.85rem;
+    font-family: $font-app-font;
+}
+.mat-select{
+    font-family: $font-app-font;
+}
+
+.mat-form-field{
+    width: 100%;
+}
+
+.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex,
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: transparent;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    padding: 0!important;
+    background-image: linear-gradient(to right, black 30%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+}
+.mat-form-field-appearance-fill {
+    .mat-form-field-label {
+        top: 1.55em;
+        margin-top: -0.85rem;
+    }
+    .mat-form-field-label.mat-empty{
+        margin-top: -4px;
+    }
+}
+.mat-form-field-appearance-fill:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-underline .mat-form-field-ripple{
+    opacity: 0!important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 0.25em 0 0.5em 0;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label,
+.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-label,
+.mat-form-field-label {
+    color: rgba(0,0,0,.85);
+    font-weight: 500!important;
+}
+.mat-radio-button{
+    vertical-align: bottom;
+    padding-right: 0.85rem;
+}
+.mat-select-value{
+    line-height: 1;
+}
+
+.mat-select-disabled .mat-select-value,
+.mat-radio-button.mat-radio-disabled .mat-radio-label-content,
+.mat-input-element:disabled, .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after{
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 991.98px) { 
+    .search-control{
+        width: 100%;
+        text-align: right;
+    }
+}
+
+
+.form {
+    margin: 0 3%;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 5%;
+}
+.form-title{
+  margin: 0 3%;  
+}
+
+.highlight-area{
+    border-radius: 3px;
+    box-shadow: 0 3px 15px rgb(204 204 204 / 35%);
+    padding: 1rem;
+    background-color: #f4f8fb;
+    border: 1px solid #e8e8e8;
+}
+
+
+// label{
+//     font-size: 1rem;
+// }
+
+@media only screen and (min-width: 992px){
+    .container.main {
+        // margin-top: 3rem; 
+    } 
+    .form{
+        margin: 0 10%;
+        padding: 3%;
+    }
+    .form-title{
+      margin: 0 10%; 
+    }
+    .mat-header-row{
+        display: table-row;
+    }
+}

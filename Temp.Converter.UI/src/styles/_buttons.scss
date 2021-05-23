@@ -1,0 +1,116 @@
+@import '_basevar';
+
+// .btn{
+//     padding: 0.7rem 1rem;
+// }
+
+.btn{
+    // min-width: 10rem;
+    padding: 0.3rem 1rem;
+    transition: 0.25s;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-moonwhite;
+    border: transparent;
+    &:not(:disabled):hover{
+        transform: translateY(-0.05em);
+        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+        color: $color-moonwhite;
+    }
+    :active{
+        border-color: $focus-color!important;
+        box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,1);
+    }
+}
+
+.btn.btn-primary
+{
+    background-color: $btn-primary-color;
+    border: 1px solid $btn-primary-color;
+    &:not(:disabled):not(.disabled):active{
+        background-color: $btn-primary-color;
+        border-color: $btn-primary-color;
+        color: $color-moonwhite!important;
+    }
+}
+
+.btn.btn-secondary
+{
+    background-color:$btn-secondary-color; 
+    border: 1px solid $btn-secondary-color;
+    color: $color-moonwhite!important;
+    &:not(:disabled):not(.disabled):active{
+        background-color: $btn-secondary-color;
+        border-color: $btn-secondary-color;
+        color: $color-moonwhite!important;
+    }
+}
+
+.btn.btn-default
+{
+    background-color:$btn-default-color;
+    border: 1px solid $btn-default-color;
+    color: $color-moonwhite!important;
+    &:not(:disabled):not(.disabled):active{
+        background-color:$btn-default-color;
+        border-color: $btn-default-color;
+        color: $color-moonwhite!important;
+    }
+}
+
+
+
+.btn.disabled, .btn:disabled{
+    background-color: $btn-disabled-color;
+    &:hover{
+        cursor:inherit;
+        transform: none;
+        box-shadow: none;
+        color: $color-moonwhite;
+    }
+}
+
+.btn.focus, .btn:focus, button:focus{
+    outline: 0;
+    box-shadow: 0 0 0 1px #B6C7CD!important; 
+}
+a.focus, a:focus,
+.page-link:focus,
+.btn-close-sci.close:focus{
+    outline: 0;
+    box-shadow: none!important; 
+}
+
+.btn-more{
+    vertical-align: bottom;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-left: 0.3rem;
+}
+
+.btn-close-sci{
+    border:none;
+    background-color: white
+}
+
+.mat-button{
+    padding: 0.3rem 1rem!important;
+    border-radius: 1rem!important;
+    font-family: $font-app-font!important;
+    line-height: inherit!important;
+}
+
+.mat-sort-header-button{
+    text-align: left!important;
+}
+
+@media only screen and (max-width: 992px){
+    // .btn.btn-sci{
+    //     width:25%; 
+    // }
+}
+
+@media only screen and (max-width: 767.98px) { 
+   
+}

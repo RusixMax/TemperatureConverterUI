@@ -1,15 +1,16 @@
 export const environment = {
-  production: true ,
-
-  
+    production: false , 
+    
+     
   appSettings: {
     title: "Temperature Converter",
     corp: "Test",
-    environmentName: "Prod"
+    environmentName: "Local-Dev"
   },
 
   temperatureApi: {
-    baseUrl: ''
+    baseUrl: 'https://localhost:44356/api/'
   },
 
-};
+    
+  };

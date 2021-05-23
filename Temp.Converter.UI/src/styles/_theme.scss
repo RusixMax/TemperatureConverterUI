@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// $subaru-theme-primary: mat-palette($mat-primary);
+// $subaru-theme-secondary:  mat-palette($mat-secondary);
+// $subaru-theme-warn:    mat-palette($mat-warn);
+
+
+// $subaru-theme: mat-light-theme($subaru-theme-primary, $subaru-theme-secondary, $subaru-theme-warn);
+
+// @include angular-material-theme($subaru-theme);
+
+
+
+
+
+
+// badge color
+.mat-badge-content {
+    color: #fff;
+    background: #C44536;
+} 

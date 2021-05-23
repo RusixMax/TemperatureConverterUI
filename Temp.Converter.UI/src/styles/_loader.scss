@@ -1,0 +1,6 @@
+@import '_basevar';
+
+.mat-progress-spinner circle, 
+.mat-spinner circle {
+    stroke:$color-adjust-huener-bg!important;
+}

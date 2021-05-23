@@ -1,0 +1,105 @@
+<form [formGroup]="temperatureForm" class="">
+    <div class="row">
+
+        <div class="form-group col-sm-4 form-control-padding">
+            <mat-form-field>
+                <mat-label>lease enter Temperature value </mat-label>
+                <input matInput type="number"  placeholder="Please Select Temperature type to convert from" 
+                [formControl]="temperatureValueCtrl" min="-100"  max="1000">               
+                <mat-error *ngIf="hasError('temperatureValueCtrl', 'required')"> please enter Temperature value
+                </mat-error>
+              </mat-form-field>    
+        </div>
+      
+        <div class="form-group col-sm-4 form-control-padding">
+            <mat-form-field>
+                <mat-select placeholder="Please select Temperature Type *"  formControlName="temperatureFromCtrl" >
+                  <mat-option *ngFor="let item of temperatureMetaData" [value]="item">
+                    {{item}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="hasError('temperatureFromCtrl', 'required')">Please select Temperature type to convert from
+                </mat-error>
+              </mat-form-field>
+        </div>
+
+        <div class="form-group col-sm-4 form-control-padding">
+            <mat-form-field>
+                <mat-label>Select Temperature Types to Convert</mat-label>
+                <mat-select [formControl]="temperatureToCtrl" multiple>
+                    <mat-option [value]="1" (click)="selectAll(ev)" #ev>Select All</mat-option>
+                    <mat-option *ngFor="let temp of temperatureMetaData" [value]="temp" [disabled]="temp == temperatureFromCtrl.value">{{temp}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="hasError('temperatureToCtrl', 'required')">Please select Temperature Type
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div>
+
+        <div class="row m-0 pt-3 justify-content-center">   
+            <div class="form-group col-12 col-xl-auto">
+                <button type="button" class="btn btn-primary mr-2 mb-2"
+                [disabled]="temperatureForm.invalid || isProcessing"
+                (click)="getConvertedData(temperatureForm)">Get Result</button>
+                
+                <button type="button" class="btn btn-secondary mr-2 mb-2" [disabled]="isProcessing"
+                (click)="clearForm()">Clear</button>
+
+            </div>
+        </div> 
+    
+    </div>
+
+
+</form>
+
+
+
+<div  class="row m-0 pt-3 justify-content-center" *ngIf="resultData && resultData.ConvertedData && resultData.ConvertedData.length > 0">
+      <div class="form-group col-12 col-xl-auto">
+
+        <div class="col-12 pb-2 pb-lg-0">
+            <span class="upload-label">Results</span>
+            <span *ngIf="errorMessage">{{errorMessage}}</span>
+        </div>
+
+        <div class="">
+            <table class="pt-4" style="width: 250px;">
+                <thead>
+                    <tr>
+                        <th>Temperature Type</th>
+                        <th>Value</th>
+                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detail of resultData.ConvertedData; let i = index;">
+                        <td>
+                            
+                                <mat-label>{{detail.temperatureType}}</mat-label>
+                            
+               
+                        </td>
+                        <td> 
+                            
+                                <mat-label>{{detail.value}}</mat-label>
+            
+                         
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+      
+        
+      </div>
+
+
+  
+</div>

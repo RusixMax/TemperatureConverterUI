@@ -1,0 +1,47 @@
+@import '_basevar';
+
+.nav-link {
+    color: $link-color;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    // transition: border-bottom-color 0.85s ease;
+    // border-bottom-color: transparent;
+    &:hover{
+        color: black;
+        // border-bottom: 5px solid $link-secondary-color;
+        // border-radius: 0;
+    }
+}
+
+
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link{
+    // background-color: transparent;
+    // border-radius: 0;
+    // border-bottom: 5px solid $btn-primary-color;
+    background-color: $focus-color;
+    font-weight: 700;
+    color: inherit;
+    
+}
+
+
+
+.mat-badge-medium.mat-badge-after .mat-badge-content {
+    right: -30px;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+}
+
+.mat-tab-label{
+     font-family: 'Open Sans', 'Helvetica Neue', sans-serif; 
+     font-weight: 700;
+}
+.mat-tab-label-active{
+    opacity: 1!important;
+}
+.mat-tab-header{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

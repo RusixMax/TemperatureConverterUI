@@ -1,0 +1,39 @@
+@import '_basevar';
+
+.page-link{
+    color: $link-color;
+}
+
+.page-item.active .page-link{
+    background-color: $pagination-color;
+    border-color: $pagination-color;
+    color: inherit;
+}
+
+a.focus, a:focus{
+   outline: 1px solid $focus-color; 
+}  
+h1.hand-over:focus{
+    outline: none!important;
+}
+
+.text-link{
+    color: $link-color;
+    text-align: right;
+    float: right;
+    padding: 0.5rem 1.5rem 0 0;
+    &:hover{
+        color: black;
+    }
+}
+
+.mat-paginator, .mat-paginator-page-size .mat-select-trigger{
+    font-family: $font-app-font;
+}
+
+
+@media only screen and (max-width: 767.98px) { 
+   .pagination{
+        overflow: scroll;
+   } 
+}

@@ -1,0 +1,26 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import '~font-awesome/css/font-awesome.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+  @import './_basevar';
+  @import './_theme';    
+  @import './_layout';
+  @import './_tabs';
+  @import './_form';
+  @import './_table';
+  @import './modal';
+  @import './_typo';
+  @import './_links';
+  @import './_buttons';
+  @import './_icons';
+  @import './_helper';
+  @import './_loader';        
+  @import './common';   
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Open Sans', "Helvetica Neue", sans-serif!important; font-size: 0.85rem;}
