@@ -1,6 +1,6 @@
 
 # Temperature Converter UI
-This is the Angular Front end project of the Temerature Converter Solution 
+This is the Angular Front end project of the Temperature Converter Solution 
 
 Application allows a user to convert between Celsius, Kelvin, and Fahrenheit
 temperature values
