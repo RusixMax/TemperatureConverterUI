@@ -121,6 +121,11 @@ export class HomePageComponent implements OnInit {
 
   }
 
+  onTemperatureTypeChange(){
+    this.temperatureToCtrl.setValue([]);
+    this.temperatureTypesToConvert = [];
+  }
+
 
   }
 

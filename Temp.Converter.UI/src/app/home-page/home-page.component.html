@@ -13,7 +13,7 @@
       
         <div class="form-group col-sm-4 form-control-padding">
             <mat-form-field>
-                <mat-select placeholder="Please select Temperature Type*"  formControlName="temperatureFromCtrl" >
+                <mat-select placeholder="Please select Temperature Type*"  formControlName="temperatureFromCtrl" (selectionChange)="onTemperatureTypeChange()">
                   <mat-option *ngFor="let item of temperatureMetaData" [value]="item">
                     {{item}}</mat-option>
                 </mat-select>
