@@ -4,7 +4,7 @@
         <div class="form-group col-sm-4 form-control-padding">
             <mat-form-field>
                 <mat-label>Please enter Temperature value* </mat-label>
-                <input matInput type="number"  placeholder="Please Select Temperature type to convert from" 
+                <input matInput type="number"  placeholder="Please enter Temperature value" 
                 [formControl]="temperatureValueCtrl" min="-500"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">               
                 <mat-error *ngIf="hasError('temperatureValueCtrl', 'required')"> Please enter Temperature value
                 </mat-error>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { ConvertedTempData, TempConversionDataModel } from '../shared/models/convertedTempData';
 import { TemperatureInput } from '../shared/models/tempInputData';
 import { SharedService } from '../shared/services/shared.service';
@@ -24,11 +25,19 @@ export class HomePageComponent implements OnInit {
   inputDataModel        : TemperatureInput;
   isProcessing          : boolean = false;
   errorMessage          :string;
+  getMetadataRef        :Subscription;
+  getResultRef          :Subscription;
 
   constructor(private sharedService: SharedService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.InitializePage();
+  }
+
+  ngOnDestroy()
+  {
+    this.getMetadataRef.unsubscribe();
+    this.getResultRef.unsubscribe();
   }
 
 
@@ -67,7 +76,7 @@ export class HomePageComponent implements OnInit {
 
 
   getMetadata() {
-    this.sharedService.getMetaData()
+    this.getMetadataRef = this.sharedService.getMetaData()
       .subscribe(
         (data) => {
           this.temperatureMetaData = <string[]>data.data;
@@ -89,10 +98,10 @@ export class HomePageComponent implements OnInit {
 
       this.isProcessing
 
-      this.sharedService.getConvertTemperatureData(this.inputDataModel).subscribe(
+      this.getResultRef = this.sharedService.getConvertTemperatureData(this.inputDataModel).subscribe(
         (data) => {     
             this.isProcessing = false;
-            this.resultData.ConvertedData = data.data.convertedData;
+            this.resultData.ConvertedData = data.data.convertedData;          
  
         },
       (_error) => { console.log(_error); 
@@ -128,6 +137,7 @@ export class HomePageComponent implements OnInit {
 
 
   }
+  
 
 
 
